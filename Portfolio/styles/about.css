@@ -1,0 +1,64 @@
+.main-content-cta{
+    display: grid;
+    grid-template-columns: 100% auto;
+    grid-template-rows: 40% 40% ;
+    grid-template-areas: "m-sec-1"
+                        "m-sec-2";
+    text-transform: none;
+    grid-gap: 20%;
+    position: none;
+    top: 0;
+    right: 0;
+    transform: translateY(0);
+    color: white;
+    text-align: center;
+    padding: 5%;
+}
+
+.main-content-cta p{
+    padding-top: 5%;
+    font-size: 2rem;
+    animation: Trans_one 3s;
+}
+
+.main-content-cta span{
+    color: #fabc3c;
+}
+
+#circle-span{
+    font-size: 4rem;
+    padding: 10%;
+}
+
+.m-sec-1{
+    grid-area: m-sec-1;
+    background-color:rgba(0, 0, 0, 0.4);
+    clip-path: circle(10% at 50% 2%);
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+}
+
+.m-sec-1 p{
+    padding: 20px;
+}
+
+
+.main-content-cta:hover .m-sec-1{
+    clip-path: circle(75%);
+}
+
+.m-sec-2{
+    grid-area: m-sec-2;
+}
+
+
+@keyframes Trans_one{
+    from{
+        opacity: 0;
+        transform: rotateX(-50deg);
+    }
+    to{
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
